@@ -14,17 +14,22 @@
 <nav>
   <span class="nav-logo">JB</span>
 
-  <div class="nav-links">
-    <a href="#sobre">Sobre</a>
-    <a href="#skills">Skills</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#certificados">Certificados</a>
-    <a href="#contato">Contato</a>
+  <div class="nav-links" id="nav-links">
+    <a href="#sobre" onclick="closeMenu()">Sobre</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#projetos" onclick="closeMenu()">Projetos</a>
+    <a href="#certificados" onclick="closeMenu()">Certificados</a>
+    <a href="#contato" onclick="closeMenu()">Contato</a>
   </div>
 
-  <button id="theme-btn" onclick="toggleTheme()" class="btn btn-outline">
-
-  </button>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <button id="theme-btn" onclick="toggleTheme()" class="btn btn-outline"></button>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -318,6 +323,25 @@
 <footer>Feito por João Barreto · 2026</footer>
 
 <script src="script.js"></script>
+<script>
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    const btn = document.getElementById('nav-hamburger');
+    links.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+
+  function closeMenu() {
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('nav-hamburger').classList.remove('open');
+  }
+
+  // Fechar menu ao clicar fora
+  document.addEventListener('click', function(e) {
+    const nav = document.querySelector('nav');
+    if (!nav.contains(e.target)) closeMenu();
+  });
+</script>
 <script>
   function openLightbox(src, title) {
     document.getElementById('lightbox-img').src = src;
