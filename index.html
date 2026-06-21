@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>João Barreto — Dev</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <span class="nav-logo">JB</span>
+
+  <div class="nav-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#skills">Skills</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#certificados">Certificados</a>
+    <a href="#contato">Contato</a>
+  </div>
+
+  <button id="theme-btn" onclick="toggleTheme()" class="btn btn-outline">
+
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="inicio">
+  <h1>João <span>Barreto</span></h1>
+
+  <p class="hero-desc">
+    Desenvolvedor de projetos reais, com foco em criação de sites e aplicativos — criando soluções que funcionam de verdade.
+  </p>
+
+  <div class="hero-cta">
+    <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+    <a href="#contato" class="btn btn-outline">Entrar em contato</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Tecnologias</h2>
+
+  <div class="skills-grid">
+    <div class="skill-group">
+      <p class="skill-group-title">Mobile</p>
+      <div class="tags">
+        <span class="tag tag-teal">Java</span>
+        <span class="tag tag-teal">Android</span>
+        <span class="tag tag-teal">Android Studio</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <p class="skill-group-title">Backend</p>
+      <div class="tags">
+        <span class="tag tag-purple">Java</span>
+        <span class="tag tag-purple">Python</span>
+        <span class="tag tag-purple">Flask</span>
+        <span class="tag tag-purple">Spring Boot</span>
+        <span class="tag tag-purple">MySQL</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <p class="skill-group-title">Frontend</p>
+      <div class="tags">
+        <span class="tag tag-coral">HTML5</span>
+        <span class="tag tag-coral">CSS3</span>
+        <span class="tag tag-coral">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <p class="skill-group-title">Ferramentas</p>
+      <div class="tags">
+        <span class="tag tag-gray">Git</span>
+        <span class="tag tag-gray">GitHub</span>
+        <span class="tag tag-gray">SQLite</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <h2>Projetos em destaque</h2>
+
+  <div class="certs-grid">
+
+    <div class="cert-card" style="cursor: default;">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" id="capa-batman" src="img/projetos/printsbatman/tela_principal.png" alt="Capa Bat-man">
+        <div class="cert-thumb-overlay" onclick="openGallery(batmanImages, 0, 'Bat-Man')">
+          <span class="cert-zoom-icon">🔍 Ampliar Imagem Atual</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-harvard" style="background-color: #222; border: 1px solid #444;">🦇 Mobile</span>
+        <h3>bat-man</h3>
+        <p style="font-size: 0.9rem; color: #888; margin: 4px 0 10px 0;">App Android de tarefas com estética de terminal.</p>
+        
+        <div style="display: flex; gap: 6px; margin-bottom: 12px;">
+          <img src="img/projetos/printsbatman/tela_principal.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
+          <img src="img/projetos/printsbatman/tela_digitando.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
+          <img src="img/projetos/printsbatman/tela_datepicker.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
+          <img src="img/projetos/printsbatman/tela_concluidas.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
+        </div>
+
+        <div class="cert-meta">
+          <a href="https://github.com/JoaoBarreto3/batman-todolist" target="_blank" style="color: #00fff2; text-decoration: none; font-size: 0.85rem;">Acessar GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" style="cursor: default;">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" id="capa-agenda" src="img/projetos/printsagendamento/agenda.png" alt="Capa AgendaPro">
+        <div class="cert-thumb-overlay" onclick="openGallery(agendaImages, 0, 'AgendaPro')">
+          <span class="cert-zoom-icon">🔍 Ampliar Imagem Atual</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-mooc" style="background-color: #4b2c6d;">📅 Web / Flask</span>
+        <h3>AgendaPro</h3>
+        <p style="font-size: 0.9rem; color: #888; margin: 4px 0 10px 0;">Sistema web de agendamento com Flask e SQLite.</p>
+        
+        <div style="display: flex; gap: 6px; margin-bottom: 12px;">
+          <img src="img/projetos/printsagendamento/agenda.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
+          <img src="img/projetos/printsagendamento/login.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
+          <img src="img/projetos/printsagendamento/novoagendamento.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
+          <img src="img/projetos/printsagendamento/clientes.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
+        </div>
+
+        <div class="cert-meta">
+          <a href="https://github.com/JoaoBarreto3/agendapro" target="_blank" style="color: #00fff2; text-decoration: none; font-size: 0.85rem;">Acessar GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICADOS -->
+<section id="certificados">
+  <h2>Certificados</h2>
+
+  <div class="certs-grid">
+
+    <div class="cert-card" onclick="openLightbox('img/CS50x - CS50x-1.png', 'CS50x — Introduction to Computer Science')">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" src="img/certificados/CS50x - CS50x-1.png" alt="CS50x Certificate" loading="lazy">
+        <div class="cert-thumb-overlay">
+          <span class="cert-zoom-icon">🔍 Ver certificado</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-harvard">Harvard University</span>
+        <h3>CS50x — Introduction to Computer Science</h3>
+        <div class="cert-meta">
+          <span>2025</span>
+          <span class="cert-hours">10 problem sets</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openLightbox('img/IT_Essentials_certificate_joao-capelo-fatec-sp-gov-br_cd827746-8c3b-4a59-977a-a68f884eb033 (1)-1.png', 'IT Essentials 7.01')">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" src="img/certificados/IT_Essentials_certificate_joao-capelo-fatec-sp-gov-br_cd827746-8c3b-4a59-977a-a68f884eb033 (1)-1.png" alt="IT Essentials Certificate" loading="lazy">
+        <div class="cert-thumb-overlay">
+          <span class="cert-zoom-icon">🔍 Ver certificado</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-cisco">Cisco Networking Academy</span>
+        <h3>IT Essentials 7.01</h3>
+        <div class="cert-meta">
+          <span>Fev 2026 · Fatec SJC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openLightbox('img/Linux_Unhatched_certificate_joao-capelo-fatec-sp-gov-br_104273f7-5d23-45d0-965a-ae2f16e39e17-1.png', 'Linux Unhatched')">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" src="img/certificados/Linux_Unhatched_certificate_joao-capelo-fatec-sp-gov-br_104273f7-5d23-45d0-965a-ae2f16e39e17-1.png" alt="Linux Unhatched Certificate" loading="lazy">
+        <div class="cert-thumb-overlay">
+          <span class="cert-zoom-icon">🔍 Ver certificado</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-cisco">Cisco Networking Academy</span>
+        <h3>Linux Unhatched</h3>
+        <div class="cert-meta">
+          <span>Out 2025 · Fatec SJC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openLightbox('img/certificate-java-programming-i.png', 'Java Programming I')">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" src="img/certificados/certificate-java-programming-i.png" alt="Java Programming I Certificate" loading="lazy">
+        <div class="cert-thumb-overlay">
+          <span class="cert-zoom-icon">🔍 Ver certificado</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-mooc">Java</span>
+        <h3>Java Programming I</h3>
+        <div class="cert-meta">
+          <span>2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openLightbox('img/Certificado Office-1.png', 'Pacote Office 2016')">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" src="img/certificados/Certificado Office-1.png" alt="Pacote Office 2016 Certificate" loading="lazy">
+        <div class="cert-thumb-overlay">
+          <span class="cert-zoom-icon">🔍 Ver certificado</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-other">Produtividade</span>
+        <h3>Pacote Office 2016</h3>
+        <div class="cert-meta">
+          <span>Mar 2025</span>
+          <span class="cert-hours">110 horas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openLightbox('img/Certificado365-1.png', 'Office 365')">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" src="img/certificados/Certificado365-1.png" alt="Office 365 Certificate" loading="lazy">
+        <div class="cert-thumb-overlay">
+          <span class="cert-zoom-icon">🔍 Ver certificado</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-other">Produtividade</span>
+        <h3>Office 365</h3>
+        <div class="cert-meta">
+          <span>Mar 2025</span>
+          <span class="cert-hours">5 horas</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+
+    <button class="gallery-prev" onclick="event.stopPropagation(); prevImage();">
+      ❮
+    </button>
+
+    <button class="gallery-next" onclick="event.stopPropagation(); nextImage();">
+      ❯
+    </button>
+
+    <p class="lightbox-title" id="lightbox-title"></p>
+
+    <img id="lightbox-img" src="" alt="">
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <h2>Sobre mim</h2>
+
+  <div class="about-text about-text-solo">
+    <p>Desenvolvedor em formação na FATEC Prof. Jessen Vidal, com foco em desenvolvimento mobile e backend. Trabalho principalmente com Java e Android no mobile, Python e Flask no backend, e tenho base sólida em HTML, CSS e JavaScript para web.</p>
+    <p>Gosto de construir projetos do zero — desde a arquitetura até o deploy — e de escrever código limpo que resolva problemas reais.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTATO -->
+<section id="contato">
+  <h2>Contato</h2>
+
+  <div class="contact-links">
+    <a href="https://linkedin.com" class="contact-link" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/JoaoBarreto3" class="contact-link" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+      GitHub
+    </a>
+
+  </div>
+</section>
+
+<footer>Feito por João Barreto · 2026</footer>
+
+<script src="script.js"></script>
+<script>
+  function openLightbox(src, title) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-title').textContent = title;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(event) {
+    if (!event || event.target === document.getElementById('lightbox') || event.target.classList.contains('lightbox-close')) {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
