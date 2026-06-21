@@ -5,10 +5,10 @@ const THEME_KEY = 'jb-theme';
 function applyTheme(theme) {
   if (theme === 'light') {
     document.body.classList.add('light');
-    document.getElementById('theme-btn').textContent = '☀️ Tema';
+    document.getElementById('theme-btn').innerHTML = '☀️ <span class="btn-label">Tema</span>';
   } else {
     document.body.classList.remove('light');
-    document.getElementById('theme-btn').textContent = '🌙 Tema';
+    document.getElementById('theme-btn').innerHTML = '🌙 <span class="btn-label">Tema</span>';
   }
 }
 
