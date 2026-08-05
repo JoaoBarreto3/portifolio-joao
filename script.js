@@ -93,6 +93,12 @@ document.addEventListener('keydown', function(e) {
 
 });
 
+const bananinhaImages = [
+  'img/projetos/printsbananinha/tela_home.png',
+  'img/projetos/printsbananinha/tela_produtos.png',
+  'img/projetos/printsbananinha/tela_sobre.png'
+];
+
 const batmanImages = [
   'img/projetos/printsbatman/tela_principal.png',
   'img/projetos/printsbatman/tela_digitando.png',
