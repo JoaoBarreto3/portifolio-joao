@@ -38,6 +38,26 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// ========================= DESCRIÇÕES TRUNCADAS =========================
+
+document.querySelectorAll('.cert-desc').forEach(desc => {
+  if (desc.scrollHeight <= desc.clientHeight + 1) return;
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'cert-desc-toggle';
+  toggle.textContent = 'Ler mais';
+  toggle.setAttribute('aria-expanded', 'false');
+
+  toggle.addEventListener('click', () => {
+    const expanded = desc.classList.toggle('expanded');
+    toggle.textContent = expanded ? 'Ler menos' : 'Ler mais';
+    toggle.setAttribute('aria-expanded', String(expanded));
+  });
+
+  desc.insertAdjacentElement('afterend', toggle);
+});
+
 // ========================= GALLERY =========================
 
 let currentGallery = [];
@@ -111,4 +131,11 @@ const agendaImages = [
   'img/projetos/printsagendamento/login.png',
   'img/projetos/printsagendamento/novoagendamento.png',
   'img/projetos/printsagendamento/clientes.png'
+];
+
+const weLogicImages = [
+  'img/projetos/printswelogic/print_dashboard.png',
+  'img/projetos/printswelogic/print_funcionarios.png',
+  'img/projetos/printswelogic/print_fornecedores.png',
+  'img/projetos/printswelogic/print_pedidos.png'
 ];

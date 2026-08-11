@@ -34,11 +34,21 @@
 
 <!-- HERO -->
 <div class="hero" id="inicio">
+  <span class="hero-tag">Disponível para novos projetos</span>
+
   <h1>João <span>Barreto</span></h1>
 
   <p class="hero-desc">
     Desenvolvedor de projetos reais, com foco em criação de sites e aplicativos — criando soluções que funcionam de verdade.
   </p>
+
+  <div class="tags" style="margin-bottom: 2.5rem;">
+    <span class="tag tag-purple">Java</span>
+    <span class="tag tag-purple">Spring Boot</span>
+    <span class="tag tag-coral">React</span>
+    <span class="tag tag-coral">TypeScript</span>
+    <span class="tag tag-gray">MySQL</span>
+  </div>
 
   <div class="hero-cta">
     <a href="#projetos" class="btn btn-primary">Ver projetos</a>
@@ -54,21 +64,13 @@
 
   <div class="skills-grid">
     <div class="skill-group">
-      <p class="skill-group-title">Mobile</p>
-      <div class="tags">
-        <span class="tag tag-teal">Java</span>
-        <span class="tag tag-teal">Android</span>
-        <span class="tag tag-teal">Android Studio</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
       <p class="skill-group-title">Backend</p>
       <div class="tags">
         <span class="tag tag-purple">Java</span>
         <span class="tag tag-purple">Python</span>
         <span class="tag tag-purple">Flask</span>
         <span class="tag tag-purple">Spring Boot</span>
+        <span class="tag tag-purple">Node.js</span>
         <span class="tag tag-purple">MySQL</span>
       </div>
     </div>
@@ -79,6 +81,8 @@
         <span class="tag tag-coral">HTML5</span>
         <span class="tag tag-coral">CSS3</span>
         <span class="tag tag-coral">JavaScript</span>
+        <span class="tag tag-coral">TypeScript</span>
+        <span class="tag tag-coral">React</span>
       </div>
     </div>
 
@@ -88,6 +92,15 @@
         <span class="tag tag-gray">Git</span>
         <span class="tag tag-gray">GitHub</span>
         <span class="tag tag-gray">SQLite</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <p class="skill-group-title">Mobile</p>
+      <div class="tags">
+        <span class="tag tag-teal">Java</span>
+        <span class="tag tag-teal">Android</span>
+        <span class="tag tag-teal">Android Studio</span>
       </div>
     </div>
   </div>
@@ -109,18 +122,43 @@
         </div>
       </div>
       <div class="cert-info">
-        <span class="cert-issuer-badge badge-harvard" style="background-color: #2d5a1b; border: 1px solid #3f7a26;">🍌 E-commerce completo</span>
+        <span class="cert-issuer-badge badge-cisco">🍌 E-commerce completo</span>
         <h3>Bananinha Caipira</h3>
-        <p style="font-size: 0.9rem; color: #888; margin: 4px 0 10px 0;">Loja virtual no ar pra um negócio real: catálogo, carrinho, frete, checkout com Pix/cartão via Mercado Pago, painel administrativo de pedidos e e-mails automáticos.</p>
+        <p class="cert-desc">Loja virtual no ar pra um negócio real: catálogo, carrinho, frete, checkout com Pix/cartão via Mercado Pago, painel administrativo de pedidos e e-mails automáticos.</p>
 
-        <div style="display: flex; gap: 6px; margin-bottom: 12px;">
-          <img src="img/projetos/printsbananinha/tela_home.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-bananinha').src = this.src">
-          <img src="img/projetos/printsbananinha/tela_produtos.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-bananinha').src = this.src">
-          <img src="img/projetos/printsbananinha/tela_sobre.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-bananinha').src = this.src">
+        <div class="cert-mini-thumbs">
+          <img class="cert-mini-thumb" src="img/projetos/printsbananinha/tela_home.png" onclick="document.getElementById('capa-bananinha').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsbananinha/tela_produtos.png" onclick="document.getElementById('capa-bananinha').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsbananinha/tela_sobre.png" onclick="document.getElementById('capa-bananinha').src = this.src">
         </div>
 
         <div class="cert-meta">
-          <a href="https://bananinhacaipira.com" target="_blank" rel="noreferrer" style="color: #00fff2; text-decoration: none; font-size: 0.85rem;">Ver site no ar →</a>
+          <a href="https://bananinhacaipira.com" target="_blank" rel="noreferrer" class="cert-link">Ver site no ar →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" style="cursor: default;">
+      <div class="cert-thumb-wrap">
+        <img class="cert-thumb" id="capa-welogic" src="img/projetos/printswelogic/print_dashboard.png" alt="Capa Newe Logic">
+        <div class="cert-thumb-overlay" onclick="openGallery(weLogicImages, 0, 'Newe Logic')">
+          <span class="cert-zoom-icon">🔍 Ampliar Imagem Atual</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <span class="cert-issuer-badge badge-harvard">📦 Backend / Equipe</span>
+        <h3>Newe Logic</h3>
+        <p class="cert-desc">API REST em Spring Boot para a Newe Logic, empresa real que usa o sistema pra gestão de pedidos de compras — fiz a parte de backend em Java, projeto em grupo na FATEC.</p>
+
+        <div class="cert-mini-thumbs">
+          <img class="cert-mini-thumb" src="img/projetos/printswelogic/print_dashboard.png" onclick="document.getElementById('capa-welogic').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printswelogic/print_funcionarios.png" onclick="document.getElementById('capa-welogic').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printswelogic/print_fornecedores.png" onclick="document.getElementById('capa-welogic').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printswelogic/print_pedidos.png" onclick="document.getElementById('capa-welogic').src = this.src">
+        </div>
+
+        <div class="cert-meta">
+          <a href="https://github.com/FawkesCode/API-2026.01" target="_blank" class="cert-link">Acessar GitHub →</a>
         </div>
       </div>
     </div>
@@ -133,19 +171,19 @@
         </div>
       </div>
       <div class="cert-info">
-        <span class="cert-issuer-badge badge-harvard" style="background-color: #222; border: 1px solid #444;">🦇 Mobile</span>
+        <span class="cert-issuer-badge badge-other">🦇 Mobile</span>
         <h3>bat-man</h3>
-        <p style="font-size: 0.9rem; color: #888; margin: 4px 0 10px 0;">App Android de tarefas com estética de terminal.</p>
-        
-        <div style="display: flex; gap: 6px; margin-bottom: 12px;">
-          <img src="img/projetos/printsbatman/tela_principal.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
-          <img src="img/projetos/printsbatman/tela_digitando.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
-          <img src="img/projetos/printsbatman/tela_datepicker.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
-          <img src="img/projetos/printsbatman/tela_concluidas.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-batman').src = this.src">
+        <p class="cert-desc">App Android de tarefas com estética de terminal.</p>
+
+        <div class="cert-mini-thumbs">
+          <img class="cert-mini-thumb" src="img/projetos/printsbatman/tela_principal.png" onclick="document.getElementById('capa-batman').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsbatman/tela_digitando.png" onclick="document.getElementById('capa-batman').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsbatman/tela_datepicker.png" onclick="document.getElementById('capa-batman').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsbatman/tela_concluidas.png" onclick="document.getElementById('capa-batman').src = this.src">
         </div>
 
         <div class="cert-meta">
-          <a href="https://github.com/JoaoBarreto3/batman-todolist" target="_blank" style="color: #00fff2; text-decoration: none; font-size: 0.85rem;">Acessar GitHub →</a>
+          <a href="https://github.com/JoaoBarreto3/batman-todolist" target="_blank" class="cert-link">Acessar GitHub →</a>
         </div>
       </div>
     </div>
@@ -158,19 +196,19 @@
         </div>
       </div>
       <div class="cert-info">
-        <span class="cert-issuer-badge badge-mooc" style="background-color: #4b2c6d;">📅 Web / Flask</span>
+        <span class="cert-issuer-badge badge-mooc">📅 Web / Flask</span>
         <h3>AgendaPro</h3>
-        <p style="font-size: 0.9rem; color: #888; margin: 4px 0 10px 0;">Sistema web de agendamento com Flask e SQLite.</p>
-        
-        <div style="display: flex; gap: 6px; margin-bottom: 12px;">
-          <img src="img/projetos/printsagendamento/agenda.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
-          <img src="img/projetos/printsagendamento/login.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
-          <img src="img/projetos/printsagendamento/novoagendamento.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
-          <img src="img/projetos/printsagendamento/clientes.png" style="width: 45px; height: 35px; object-fit: cover; border-radius: 4px; cursor: pointer; border: 1px solid #555;" onclick="document.getElementById('capa-agenda').src = this.src">
+        <p class="cert-desc">Sistema web de agendamento com Flask e SQLite.</p>
+
+        <div class="cert-mini-thumbs">
+          <img class="cert-mini-thumb" src="img/projetos/printsagendamento/agenda.png" onclick="document.getElementById('capa-agenda').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsagendamento/login.png" onclick="document.getElementById('capa-agenda').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsagendamento/novoagendamento.png" onclick="document.getElementById('capa-agenda').src = this.src">
+          <img class="cert-mini-thumb" src="img/projetos/printsagendamento/clientes.png" onclick="document.getElementById('capa-agenda').src = this.src">
         </div>
 
         <div class="cert-meta">
-          <a href="https://github.com/JoaoBarreto3/agendapro" target="_blank" style="color: #00fff2; text-decoration: none; font-size: 0.85rem;">Acessar GitHub →</a>
+          <a href="https://github.com/JoaoBarreto3/agendapro" target="_blank" class="cert-link">Acessar GitHub →</a>
         </div>
       </div>
     </div>
@@ -316,8 +354,8 @@
   <h2>Sobre mim</h2>
 
   <div class="about-text about-text-solo">
-    <p>Desenvolvedor em formação na FATEC Prof. Jessen Vidal, com foco em desenvolvimento mobile e backend. Trabalho principalmente com Java e Android no mobile, Python e Flask no backend, e tenho base sólida em HTML, CSS e JavaScript para web.</p>
-    <p>Gosto de construir projetos do zero — desde a arquitetura até o deploy — e de escrever código limpo que resolva problemas reais.</p>
+    <p>Desenvolvedor em formação na FATEC Prof. Jessen Vidal, com foco em backend e desenvolvimento web. Atuo principalmente com Java e Spring Boot, Python e Flask, além de HTML, CSS, JavaScript e React no front-end.</p>
+    <p>Já desenvolvi projetos reais para empresas reais: a <strong>Bananinha Caipira</strong>, uma loja virtual em produção com checkout via Pix e cartão integrado ao Mercado Pago, atendendo um negócio já em operação; e a <strong>Newe Logic</strong>, um sistema de gestão de compras com API REST em Spring Boot, desenvolvido em equipe através da FATEC para uma empresa parceira.</p>
   </div>
 </section>
 

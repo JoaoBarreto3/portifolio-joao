@@ -596,6 +596,62 @@ section {
 .cert-info { padding: 1.2rem 1.5rem 1.5rem; }
 .cert-info .cert-issuer-badge { margin-bottom: 8px; }
 
+.cert-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 4px 0 10px 0;
+  min-height: 4.5em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cert-desc.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.cert-desc-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: -6px 0 10px 0;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--c-accent);
+  cursor: pointer;
+}
+.cert-desc-toggle:hover { color: var(--c-accent-hover); text-decoration: underline; }
+
+.cert-mini-thumbs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.cert-mini-thumb {
+  width: 45px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+}
+.cert-mini-thumb:hover { border-color: var(--border-hover); }
+
+.cert-link {
+  color: var(--c-accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+.cert-link:hover { color: var(--c-accent-hover); }
+
 /* ========================= LIGHTBOX ========================= */
 
 .lightbox {
@@ -669,6 +725,11 @@ section {
   line-height: 1.8;
   color: var(--about-text);
   transition: color 0.3s ease;
+}
+
+.about-text strong {
+  color: var(--text-heading);
+  font-weight: 600;
 }
 
 .about-text-solo {
@@ -801,6 +862,25 @@ body.light .hero::before {
 .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (min-width: 1400px) {
+  .hero, section {
+    max-width: 1080px;
+  }
+
+  h1 { font-size: clamp(3.2rem, 4.5vw, 5rem); }
+
+  .hero-desc {
+    font-size: 1.35rem;
+    max-width: 640px;
+  }
+
+  .hero-tag { font-size: 15px; padding: 8px 18px; }
+
+  .tag { font-size: 15px; padding: 9px 16px; }
+
+  .btn { font-size: 16px; padding: 14px 26px; }
+}
 
 @media (max-width: 700px) {
   nav {
